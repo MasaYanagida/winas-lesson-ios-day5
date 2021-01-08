@@ -79,6 +79,22 @@ class ContentService {
                 // run in main => UI thread
                 DispatchQueue.main.async {
                     var dataArray = [Feedable]()
+                    safeJson.arrayValue.forEach { jsonObject in
+                        guard let contentTypeId = jsonObject["content_type"].int,
+                            let contentType = FeedContentType(rawValue: contentTypeId) else {
+                            return
+                        }
+                        switch contentType {
+                        case .hospital:
+                            if let hospital = Mapper<Hospital>().map(JSONObject: jsonObject.dictionaryObject) {
+                                dataArray.append(hospital)
+                            }
+                        case .restraunt:
+                            if let restaurant = Mapper<Restaurant>().map(JSONObject: jsonObject.dictionaryObject) {
+                                dataArray.append(restaurant)
+                            }
+                        }
+                    }
                     completion?(dataArray)
                 }
             },

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0500F21DA660EA3B98F3C100 /* Pods_Day5Sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F07DA3E7C95D15C03DC4842B /* Pods_Day5Sample.framework */; };
+		333057C125A8532A00ACBE38 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333057C025A8532A00ACBE38 /* MapViewController.swift */; };
+		333057C425A8547B00ACBE38 /* MapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333057C325A8547B00ACBE38 /* MapAnnotation.swift */; };
+		333057C725A8558100ACBE38 /* MapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333057C625A8558100ACBE38 /* MapAnnotationView.swift */; };
 		337B0F1225A449AD008D83A1 /* HospitalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337B0F1125A449AD008D83A1 /* HospitalDetailViewController.swift */; };
 		337B0F1525A449E5008D83A1 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337B0F1425A449E5008D83A1 /* StoryboardInstantiable.swift */; };
 		337B0F1825A44A26008D83A1 /* HospitalDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 337B0F1725A44A26008D83A1 /* HospitalDetailViewController.storyboard */; };
@@ -42,6 +45,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		333057C025A8532A00ACBE38 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		333057C325A8547B00ACBE38 /* MapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotation.swift; sourceTree = "<group>"; };
+		333057C625A8558100ACBE38 /* MapAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotationView.swift; sourceTree = "<group>"; };
 		337B0F1125A449AD008D83A1 /* HospitalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalDetailViewController.swift; sourceTree = "<group>"; };
 		337B0F1425A449E5008D83A1 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
 		337B0F1725A44A26008D83A1 /* HospitalDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HospitalDetailViewController.storyboard; sourceTree = "<group>"; };
@@ -214,6 +220,8 @@
 				33F126CA25A2DFBF0002DC1A /* HospitalTableViewCell.xib */,
 				33F126CD25A2E80B0002DC1A /* RestaurantTableViewCell.swift */,
 				33F126D025A2E8920002DC1A /* RestaurantTableViewCell.xib */,
+				333057C325A8547B00ACBE38 /* MapAnnotation.swift */,
+				333057C625A8558100ACBE38 /* MapAnnotationView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -225,6 +233,7 @@
 				337B0F1725A44A26008D83A1 /* HospitalDetailViewController.storyboard */,
 				337B0F1A25A44F30008D83A1 /* RestaurantDetailViewController.swift */,
 				337B0F1D25A44FDA008D83A1 /* RestaurantDetailViewController.storyboard */,
+				333057C025A8532A00ACBE38 /* MapViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -367,6 +376,7 @@
 				33F126C325A2D38F0002DC1A /* Restaurant.swift in Sources */,
 				337B0F1525A449E5008D83A1 /* StoryboardInstantiable.swift in Sources */,
 				337B0F1B25A44F30008D83A1 /* RestaurantDetailViewController.swift in Sources */,
+				333057C125A8532A00ACBE38 /* MapViewController.swift in Sources */,
 				33DCFA7825A066F400D04B0A /* Utility.swift in Sources */,
 				33DCFA7C25A0674600D04B0A /* Service.swift in Sources */,
 				33F126C025A2D0B20002DC1A /* Hospital.swift in Sources */,
@@ -377,9 +387,11 @@
 				337B0F2D25A45350008D83A1 /* NavigationMap.swift in Sources */,
 				33DCFA6F25A0667500D04B0A /* UIColor+Util.swift in Sources */,
 				33F126C725A2DF6E0002DC1A /* HospitalTableViewCell.swift in Sources */,
+				333057C725A8558100ACBE38 /* MapAnnotationView.swift in Sources */,
 				33F126CE25A2E80B0002DC1A /* RestaurantTableViewCell.swift in Sources */,
 				33DCFA8125A067D700D04B0A /* Feedable.swift in Sources */,
 				33DCFA9925A06BF400D04B0A /* UIImage+Util.swift in Sources */,
+				333057C425A8547B00ACBE38 /* MapAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

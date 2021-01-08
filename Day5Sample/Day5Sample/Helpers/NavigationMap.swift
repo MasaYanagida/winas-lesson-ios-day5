@@ -14,6 +14,22 @@ import URLNavigator
 enum NavigationMap {
     static let navigator = Navigator()
     static func initialize() {
-        
+        navigator.register("winas://hospital/<int:id>") { url, values, _ in
+            guard let hospitalId = values["id"] as? Int else {
+                return nil
+            }
+            let controller = HospitalDetailViewController.fromStoryboard()
+            controller.hospitalId = hospitalId
+            return controller
+        }
+
+        navigator.register("winas://restaurant/<int:id>") { url, values, _ in
+            guard let restaurantId = values["id"] as? Int else {
+                return nil
+            }
+            let controller = RestaurantDetailViewController.fromStoryboard()
+            controller.restaurantId = restaurantId
+            return controller
+        }
     }
 }

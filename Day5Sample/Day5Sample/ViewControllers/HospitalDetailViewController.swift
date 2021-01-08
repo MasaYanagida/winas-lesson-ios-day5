@@ -19,8 +19,18 @@ class HospitalDetailViewController: UIViewController {
             updateView()
         }
     }
+    var hospitalId: Int = 0 {
+        didSet {
+            Service.content.getHospital(
+                hospitalId: hospitalId,
+                completion: { hospital in
+                    self.hospital = hospital
+                },
+                failure: nil)
+        }
+    }
     
-    /*private var annotation: MapAnnotation<Hospital>? = nil {
+    private var annotation: MapAnnotation<Hospital>? = nil {
         willSet {
             // remove old value first
             if let annotation = self.annotation {
@@ -33,7 +43,7 @@ class HospitalDetailViewController: UIViewController {
                 mapView.addAnnotation(annotation)
             }
         }
-    }*/
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,7 +75,7 @@ class HospitalDetailViewController: UIViewController {
         ))
         phoneLabel.attributedText = [phoneIconString, phoneString].joined(separator: " ")
         
-        //annotation = MapAnnotation<Hospital>.create(hospital)
+        annotation = MapAnnotation<Hospital>.create(hospital)
     }
     
     // MARK: Private
@@ -93,7 +103,7 @@ class HospitalDetailViewController: UIViewController {
 
 extension HospitalDetailViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        /*guard let mapAnnotation = annotation as? MapAnnotation<Hospital>,
+        guard let mapAnnotation = annotation as? MapAnnotation<Hospital>,
               let hospital = self.hospital else { return nil }
         let reuseIdentifier = MapAnnotationView<Hospital>.getReuseIdentifier(hospital)
         if let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseIdentifier) as? MapAnnotationView<Hospital> {
@@ -103,8 +113,7 @@ extension HospitalDetailViewController: MKMapViewDelegate {
             annotationView.isEnabled = true
             annotationView.canShowCallout = false
             return annotationView
-        }*/
-        return nil
+        }
     }
 }
 

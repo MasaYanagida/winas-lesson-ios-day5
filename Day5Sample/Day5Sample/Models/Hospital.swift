@@ -26,8 +26,8 @@ enum HospitalDepartment: Int {
 }
 
 // MARK: Hospital
-
-class Hospital: Mappable {
+// implement protocol(interface)
+class Hospital: Mappable, Feedable, Locatable {
     var id: Int = 0
     var name: String = ""
     var fullName: String = ""
@@ -41,6 +41,19 @@ class Hospital: Mappable {
     
     var departments: [HospitalDepartment] {
         return departmentIds.compactMap { HospitalDepartment(rawValue: $0) }
+    }
+    
+    // Feedable
+    var feedContentType: FeedContentType {
+        return .hospital
+    }
+    
+    // Locatable
+    var location: CLLocationCoordinate2D {
+        return CLLocationCoordinate2DMake(latitude, longitude)
+    }
+    var mapColor: UIColor {
+        return .appBlue
     }
     
     required convenience init?(map: Map) {

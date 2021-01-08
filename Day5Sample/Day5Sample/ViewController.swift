@@ -48,8 +48,20 @@ extension ViewController: UITableViewDataSource {
         return contents.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // TODO
-        return UITableViewCell()
+        let content = contents[indexPath.row] // Feedable
+        switch content {
+        case let content as Hospital: // Hospital
+            let cell = tableView.dequeueReusableCell(withIdentifier: "HospitalTableViewCell", for: indexPath) as! HospitalTableViewCell
+            cell.delegate = self
+            cell.hospital = content
+            return cell
+        case let content as Restaurant:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantTableViewCell", for: indexPath) as! RestaurantTableViewCell
+            cell.delegate = self
+            cell.restaurant = content
+            return cell
+        default: return UITableViewCell()
+        }
     }
 }
 
@@ -85,7 +97,11 @@ extension ViewController: HospitalTableViewCellDelegate {
         let alert = UIAlertController(title: hospital.name, message: hospital.address, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         
-        // TODO : add map view controller
+        let mapViewController = MapViewController<Hospital>()
+        mapViewController.item = hospital
+        alert.setValue(mapViewController, forKey: "contentViewController")
+        mapViewController.preferredContentSize.height = 300
+        
         present(alert, animated: true, completion: nil)
     }
 }
@@ -99,7 +115,11 @@ extension ViewController: RestaurantTableViewCellDelegate {
         let alert = UIAlertController(title: restaurant.name, message: restaurant.address, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         
-        // TODO : add map view controller
+        let mapViewController = MapViewController<Restaurant>()
+        mapViewController.item = restaurant
+        alert.setValue(mapViewController, forKey: "contentViewController")
+        mapViewController.preferredContentSize.height = 300
+        
         present(alert, animated: true, completion: nil)
     }
 }

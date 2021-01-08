@@ -19,8 +19,18 @@ class RestaurantDetailViewController: UIViewController {
             updateView()
         }
     }
+    var restaurantId: Int = 0 {
+        didSet {
+            Service.content.getRestaurant(
+                restaurantId: restaurantId,
+                completion: { restaurant in
+                    self.restaurant = restaurant
+                },
+                failure: nil)
+        }
+    }
     
-    /*private var annotation: MapAnnotation<Restaurant>? = nil {
+    private var annotation: MapAnnotation<Restaurant>? = nil {
         willSet {
             // remove old value first
             if let annotation = self.annotation {
@@ -33,7 +43,7 @@ class RestaurantDetailViewController: UIViewController {
                 mapView.addAnnotation(annotation)
             }
         }
-    }*/
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,7 +71,7 @@ class RestaurantDetailViewController: UIViewController {
             photoView.loadKingfisherImage(photoUrl)
         }
         
-        //annotation = MapAnnotation<Restaurant>.create(restaurant)
+        annotation = MapAnnotation<Restaurant>.create(restaurant)
     }
     
     // MARK: Private
@@ -89,18 +99,17 @@ class RestaurantDetailViewController: UIViewController {
 
 extension RestaurantDetailViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-//        guard let mapAnnotation = annotation as? MapAnnotation<Restaurant>,
-//              let restaurant = self.restaurant else { return nil }
-//        let reuseIdentifier = MapAnnotationView<Restaurant>.getReuseIdentifier(restaurant)
-//        if let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseIdentifier) as? MapAnnotationView<Restaurant> {
-//            return annotationView
-//        } else {
-//            let annotationView = MapAnnotationView<Restaurant>(annotation: mapAnnotation, reuseIdentifier: reuseIdentifier)
-//            annotationView.isEnabled = true
-//            annotationView.canShowCallout = false
-//            return annotationView
-//        }
-        return nil
+        guard let mapAnnotation = annotation as? MapAnnotation<Restaurant>,
+              let restaurant = self.restaurant else { return nil }
+        let reuseIdentifier = MapAnnotationView<Restaurant>.getReuseIdentifier(restaurant)
+        if let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseIdentifier) as? MapAnnotationView<Restaurant> {
+            return annotationView
+        } else {
+            let annotationView = MapAnnotationView<Restaurant>(annotation: mapAnnotation, reuseIdentifier: reuseIdentifier)
+            annotationView.isEnabled = true
+            annotationView.canShowCallout = false
+            return annotationView
+        }
     }
 }
 

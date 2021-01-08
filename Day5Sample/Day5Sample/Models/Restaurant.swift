@@ -24,7 +24,7 @@ enum RestaurantCategory: Int {
 
 // MARK: Restaurant
 
-class Restaurant: Mappable {
+class Restaurant: Mappable, Feedable, Locatable {
     var id: Int = 0
     var name: String = ""
     var categoryId: Int = 0
@@ -36,6 +36,19 @@ class Restaurant: Mappable {
     
     var category: RestaurantCategory? {
         return RestaurantCategory(rawValue: categoryId)
+    }
+    
+    // Feedable
+    var feedContentType: FeedContentType {
+        return .restraunt
+    }
+    
+    // Locatable
+    var location: CLLocationCoordinate2D {
+        return CLLocationCoordinate2DMake(latitude, longitude)
+    }
+    var mapColor: UIColor {
+        return .appRed
     }
     
     required convenience init?(map: Map) {
