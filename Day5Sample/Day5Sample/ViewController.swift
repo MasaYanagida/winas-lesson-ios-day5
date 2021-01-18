@@ -48,22 +48,23 @@ extension ViewController: UITableViewDataSource {
         return contents.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let content = contents[indexPath.row] // Feedable
+            let content = contents[indexPath.row]
         switch content {
-        case let content as Hospital: // Hospital
+        case let content as Hospital:
             let cell = tableView.dequeueReusableCell(withIdentifier: "HospitalTableViewCell", for: indexPath) as! HospitalTableViewCell
             cell.delegate = self
             cell.hospital = content
             return cell
-        case let content as Restaurant:
+        case  let content as Restaurant:
             let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantTableViewCell", for: indexPath) as! RestaurantTableViewCell
             cell.delegate = self
             cell.restaurant = content
             return cell
-        default: return UITableViewCell()
+        default:let cell = tableView
+            return UITableViewCell()
+        }
         }
     }
-}
 
 // MARK: - UITableViewDelegate
 

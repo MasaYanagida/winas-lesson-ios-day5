@@ -67,43 +67,5 @@ class ContentService {
         )
     }
     
-    func getList(
-        completion: ((_ dataArray: [Feedable]) -> Void)? = { _ in },
-        failure: ((_ error: NSError?, _ statusCode: Int?) -> Void)? = { _, _ in }
-        )
-    {
-        _ = SampleNetwork.request(
-            target: .getList,
-            success: { json, _ in
-                guard let safeJson = json else { return }
-                // run in main => UI thread
-                DispatchQueue.main.async {
-                    var dataArray = [Feedable]()
-                    safeJson.arrayValue.forEach { jsonObject in
-                        guard let contentTypeId = jsonObject["content_type"].int,
-                            let contentType = FeedContentType(rawValue: contentTypeId) else {
-                            return
-                        }
-                        switch contentType {
-                        case .hospital:
-                            if let hospital = Mapper<Hospital>().map(JSONObject: jsonObject.dictionaryObject) {
-                                dataArray.append(hospital)
-                            }
-                        case .restraunt:
-                            if let restaurant = Mapper<Restaurant>().map(JSONObject: jsonObject.dictionaryObject) {
-                                dataArray.append(restaurant)
-                            }
-                        }
-                    }
-                    completion?(dataArray)
-                }
-            },
-            error: { statusCode in
-                failure?(nil, statusCode)
-            },
-            failure: { error in
-                failure?(nil, nil)
-            }
-        )
-    }
+
 }
