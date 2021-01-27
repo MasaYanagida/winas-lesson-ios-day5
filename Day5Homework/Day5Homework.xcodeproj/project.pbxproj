@@ -28,6 +28,19 @@
 		33F19EEC25A82B2F003E6645 /* UIImageView+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F19EE725A82B2F003E6645 /* UIImageView+Util.swift */; };
 		33F19EED25A82B2F003E6645 /* UIImage+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F19EE825A82B2F003E6645 /* UIImage+Util.swift */; };
 		33F19EEE25A82B2F003E6645 /* UIFont+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F19EE925A82B2F003E6645 /* UIFont+Util.swift */; };
+		EFEDD57125B2F2F2009D9BCD /* Feedable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDD57025B2F2F2009D9BCD /* Feedable.swift */; };
+		EFEDD57925B42E1F009D9BCD /* MapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDD57325B42E1F009D9BCD /* MapAnnotationView.swift */; };
+		EFEDD57A25B42E1F009D9BCD /* HospitalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDD57425B42E1F009D9BCD /* HospitalTableViewCell.swift */; };
+		EFEDD57B25B42E1F009D9BCD /* MapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDD57525B42E1F009D9BCD /* MapAnnotation.swift */; };
+		EFEDD57C25B42E1F009D9BCD /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDD57625B42E1F009D9BCD /* RestaurantTableViewCell.swift */; };
+		EFEDD57D25B42E1F009D9BCD /* HospitalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFEDD57725B42E1F009D9BCD /* HospitalTableViewCell.xib */; };
+		EFEDD57E25B42E1F009D9BCD /* RestaurantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFEDD57825B42E1F009D9BCD /* RestaurantTableViewCell.xib */; };
+		EFEDD58625B43497009D9BCD /* HospitalDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFEDD58125B43497009D9BCD /* HospitalDetailViewController.storyboard */; };
+		EFEDD58725B43497009D9BCD /* HospitalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDD58225B43497009D9BCD /* HospitalDetailViewController.swift */; };
+		EFEDD58825B43497009D9BCD /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDD58325B43497009D9BCD /* MapViewController.swift */; };
+		EFEDD58925B43497009D9BCD /* RestaurantDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFEDD58425B43497009D9BCD /* RestaurantDetailViewController.storyboard */; };
+		EFEDD58A25B43497009D9BCD /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDD58525B43497009D9BCD /* RestaurantDetailViewController.swift */; };
+		EFEDD58E25B43616009D9BCD /* Locatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDD58D25B43616009D9BCD /* Locatable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +69,19 @@
 		40E5CFD8BCDF53D58F0D0A00 /* Pods-Day5Homework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Day5Homework.debug.xcconfig"; path = "Target Support Files/Pods-Day5Homework/Pods-Day5Homework.debug.xcconfig"; sourceTree = "<group>"; };
 		9E23DB0688C438C4462957AB /* Pods_Day5Homework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Day5Homework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F55ACC3A90285523875AF2A /* Pods-Day5Homework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Day5Homework.release.xcconfig"; path = "Target Support Files/Pods-Day5Homework/Pods-Day5Homework.release.xcconfig"; sourceTree = "<group>"; };
+		EFEDD57025B2F2F2009D9BCD /* Feedable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedable.swift; sourceTree = "<group>"; };
+		EFEDD57325B42E1F009D9BCD /* MapAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapAnnotationView.swift; sourceTree = "<group>"; };
+		EFEDD57425B42E1F009D9BCD /* HospitalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalTableViewCell.swift; sourceTree = "<group>"; };
+		EFEDD57525B42E1F009D9BCD /* MapAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapAnnotation.swift; sourceTree = "<group>"; };
+		EFEDD57625B42E1F009D9BCD /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		EFEDD57725B42E1F009D9BCD /* HospitalTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HospitalTableViewCell.xib; sourceTree = "<group>"; };
+		EFEDD57825B42E1F009D9BCD /* RestaurantTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RestaurantTableViewCell.xib; sourceTree = "<group>"; };
+		EFEDD58125B43497009D9BCD /* HospitalDetailViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HospitalDetailViewController.storyboard; sourceTree = "<group>"; };
+		EFEDD58225B43497009D9BCD /* HospitalDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalDetailViewController.swift; sourceTree = "<group>"; };
+		EFEDD58325B43497009D9BCD /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		EFEDD58425B43497009D9BCD /* RestaurantDetailViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RestaurantDetailViewController.storyboard; sourceTree = "<group>"; };
+		EFEDD58525B43497009D9BCD /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
+		EFEDD58D25B43616009D9BCD /* Locatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locatable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +197,8 @@
 			isa = PBXGroup;
 			children = (
 				33F19ED725A82AE2003E6645 /* StoryboardInstantiable.swift */,
+				EFEDD57025B2F2F2009D9BCD /* Feedable.swift */,
+				EFEDD58D25B43616009D9BCD /* Locatable.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -186,6 +214,11 @@
 		33F19EAD25A8229E003E6645 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				EFEDD58125B43497009D9BCD /* HospitalDetailViewController.storyboard */,
+				EFEDD58225B43497009D9BCD /* HospitalDetailViewController.swift */,
+				EFEDD58325B43497009D9BCD /* MapViewController.swift */,
+				EFEDD58425B43497009D9BCD /* RestaurantDetailViewController.storyboard */,
+				EFEDD58525B43497009D9BCD /* RestaurantDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -193,6 +226,12 @@
 		33F19EB125A8232F003E6645 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				EFEDD57425B42E1F009D9BCD /* HospitalTableViewCell.swift */,
+				EFEDD57725B42E1F009D9BCD /* HospitalTableViewCell.xib */,
+				EFEDD57525B42E1F009D9BCD /* MapAnnotation.swift */,
+				EFEDD57325B42E1F009D9BCD /* MapAnnotationView.swift */,
+				EFEDD57625B42E1F009D9BCD /* RestaurantTableViewCell.swift */,
+				EFEDD57825B42E1F009D9BCD /* RestaurantTableViewCell.xib */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -267,7 +306,11 @@
 				33F19E8225A820A3003E6645 /* LaunchScreen.storyboard in Resources */,
 				33F19EE225A82B13003E6645 /* fa-solid-900.ttf in Resources */,
 				33F19EE125A82B13003E6645 /* fa-regular-400.ttf in Resources */,
+				EFEDD57D25B42E1F009D9BCD /* HospitalTableViewCell.xib in Resources */,
+				EFEDD58625B43497009D9BCD /* HospitalDetailViewController.storyboard in Resources */,
 				33F19E7F25A820A3003E6645 /* Assets.xcassets in Resources */,
+				EFEDD58925B43497009D9BCD /* RestaurantDetailViewController.storyboard in Resources */,
+				EFEDD57E25B42E1F009D9BCD /* RestaurantTableViewCell.xib in Resources */,
 				33F19E7D25A820A3003E6645 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,21 +364,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFEDD57C25B42E1F009D9BCD /* RestaurantTableViewCell.swift in Sources */,
 				33F19EEE25A82B2F003E6645 /* UIFont+Util.swift in Sources */,
+				EFEDD57125B2F2F2009D9BCD /* Feedable.swift in Sources */,
 				33F19ED425A82AB2003E6645 /* Service.swift in Sources */,
 				33F19E7A25A820A3003E6645 /* ViewController.swift in Sources */,
 				33F19E7625A820A3003E6645 /* AppDelegate.swift in Sources */,
+				EFEDD57925B42E1F009D9BCD /* MapAnnotationView.swift in Sources */,
 				33F19ED825A82AE2003E6645 /* StoryboardInstantiable.swift in Sources */,
 				33F19EEC25A82B2F003E6645 /* UIImageView+Util.swift in Sources */,
+				EFEDD58E25B43616009D9BCD /* Locatable.swift in Sources */,
 				33F19EED25A82B2F003E6645 /* UIImage+Util.swift in Sources */,
 				33F19ECE25A82A9A003E6645 /* Hospital.swift in Sources */,
+				EFEDD58825B43497009D9BCD /* MapViewController.swift in Sources */,
 				33F19EC825A82A60003E6645 /* SampleAPI.swift in Sources */,
+				EFEDD58725B43497009D9BCD /* HospitalDetailViewController.swift in Sources */,
 				33F19ED325A82AB2003E6645 /* ContentService.swift in Sources */,
 				33F19E7825A820A3003E6645 /* SceneDelegate.swift in Sources */,
 				33F19ECD25A82A9A003E6645 /* Restaurant.swift in Sources */,
 				33F19EDC25A82AFA003E6645 /* NavigationMap.swift in Sources */,
 				33F19EEA25A82B2F003E6645 /* UIView+Util.swift in Sources */,
 				33F19EEB25A82B2F003E6645 /* UIColor+Util.swift in Sources */,
+				EFEDD57B25B42E1F009D9BCD /* MapAnnotation.swift in Sources */,
+				EFEDD58A25B43497009D9BCD /* RestaurantDetailViewController.swift in Sources */,
+				EFEDD57A25B42E1F009D9BCD /* HospitalTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

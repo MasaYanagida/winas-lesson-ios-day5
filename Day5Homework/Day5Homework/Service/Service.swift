@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import SwiftyJSON
+import ObjectMapper
 
 class Service {
     static let content = ContentService()
